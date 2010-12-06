@@ -1,0 +1,37 @@
+<h1>Editing student</h1>
+
+<% form_for(@student) do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :first_name%>:
+  <%= f.text_field :first_name%><br />
+  
+  <%= f.label :last_name%>:
+  <%= f.text_field :last_name %><br />
+  
+  <%= label_tag("School:") %>
+  <%= collection_select(:student, :school_id, School.find(:all), :id, :name, {:selected => @student.school_id}) %><br />
+  
+  <%= f.label :rank%>:
+  <%= f.text_field :rank %><br />
+  
+  <%= f.label :last_test%>:
+  <%= f.text_field :last_test %><br />
+  
+  <%= f.label :email_address%>:
+  <%= f.text_field :email_address %><br />
+  
+  <%= f.label :phone%>:
+  <%= f.text_field :phone%><br />
+  
+  <br/><br/><b>Add Attendance</b><br />
+  <%= label_tag("Number of Classes") %> 
+  <input name="number_of_classes" type="text" />
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Show', @student %> |
+<%= link_to 'Back', students_path %>

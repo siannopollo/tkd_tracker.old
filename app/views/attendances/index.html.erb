@@ -1,0 +1,24 @@
+<h1>Attendance</h1>
+ 
+<table>
+  <tr>
+  <th>Student</th>
+  <th>Class 1</th>
+  <th>Class 2</th>
+  <th>Class 3</th>
+  </tr>
+
+<% form_tag("attendances", :method=>'post') do %>
+	<% for student in @students %>
+	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
+	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox'}) %></td>
+	  </tr>
+	<% end %>
+</table>
+
+<%= submit_tag("Register Attendances") %>
+<% end %>
+

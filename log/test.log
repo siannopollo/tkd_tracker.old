@@ -1,0 +1,137 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20101127163144)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "rank" integer, "last_test" date, "classes_since_last_test" integer, "email_address" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101127163144')[0m
+Migrating to CreateAttendances (20101127163403)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "attendances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "student_id" integer, "number_of_classes" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101127163403')[0m
+Migrating to CreateSchools (20101201204349)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "schools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101201204349')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("attendances")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-03') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-03') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-04') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-04') [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-04') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-04') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-04') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-04') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 1) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'JoeJoe') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 1) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '1' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (first_name = 'Sally') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE (student_id = '2' AND created_at > '2010-12-06') [0m

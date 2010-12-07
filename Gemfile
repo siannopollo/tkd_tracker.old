@@ -1,10 +1,10 @@
 gem 'abstract', '1.0.0'
 gem 'actionmailer', '2.3.8'
-gem 'actionpack', '3.0.3, 2.3.8'
+gem 'actionpack', '2.3.8'
 gem 'activemodel', '3.0.3'
 gem 'activerecord', '2.3.8'
-gem 'activeresource', '2.3.8)
-gem 'activesupport', '3.0.3, 2.3.8'
+gem 'activeresource', '2.3.8'
+gem 'activesupport', '2.3.8'
 gem 'builder', '2.1.2'
 gem 'bundler', '1.0.7'
 gem 'cgi_multipart_eof_fix', '2.5.0'

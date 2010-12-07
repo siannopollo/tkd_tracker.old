@@ -17,3 +17,12 @@ two:
   last_test: 2010-11-27
   email_address: 
   phone: 
+  
+three:
+  id: 3
+  first_name: Jason
+  last_name: Jones
+  rank: 14
+  last_test: 2010-11-27
+  email_address: 
+  phone: 

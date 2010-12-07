@@ -28,4 +28,9 @@ class StudentTest < ActiveSupport::TestCase
     assert(sally.is_eligible_to_test(Date::civil(2011, 4, 5), 23))
   end
   
+  test "mighty kid Jason does not have enough classes to test" do
+    jason = Student.find(:first, :conditions => "first_name = 'Jason'")
+    assert(!jason.is_eligible_to_test(Date::civil(2011, 4, 5)))
+  end
+  
 end

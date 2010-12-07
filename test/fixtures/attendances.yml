@@ -11,3 +11,8 @@ Sally:
     date: 2010-12-17
     number_of_classes: 3
     student_id: 2
+    
+Jason:
+   date: 2011-3-15
+   number_of_classes: 10
+   student_id: 3

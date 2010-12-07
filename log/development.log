@@ -4829,3 +4829,693 @@ Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-07 10:39
   [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
 Rendering reports/test_eligibility
 Completed in 93ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/reports/test_eligibility]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 13:49:47) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 328ms (View: 265, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 13:51:51) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+
+ActionView::TemplateError (undefined method `student' for #<Student:0x48f5a60>) on line #26 of app/views/students/new.html.erb:
+23: 
+24: <tr>  
+25:   <td><b><%= f.label :rank%>:</b></td>
+26:   <td><%= f.select(:student, :rank, {"Mighty Kid Yellow Stripe" => 14,
+27:   							 "Mighty Kid White/Yellow" => 13,
+28: 							 "Mighty Kid Orange Stripe" => 12,
+29: 							 "Mighty Kid Green Stripe" => 11,
+
+    app/views/students/new.html.erb:26
+    app/views/students/new.html.erb:6
+    app/controllers/students_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 13:54:50) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+
+ActionView::TemplateError (undefined method `student' for #<Student:0x46f0b00>) on line #26 of app/views/students/new.html.erb:
+23: 
+24: <tr>  
+25:   <td><b><%= f.label :rank%>:</b></td>
+26:   <td><%= f.select("student", "rank", {"Mighty Kid Yellow Stripe" => 14,
+27:   							 "Mighty Kid White/Yellow" => 13,
+28: 							 "Mighty Kid Orange Stripe" => 12,
+29: 							 "Mighty Kid Green Stripe" => 11,
+
+    app/views/students/new.html.erb:26
+    app/views/students/new.html.erb:6
+    app/controllers/students_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (62.7ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 13:55:50) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 110ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 13:56:15) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 14:00:15) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 14:01:21) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 14:55:09) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 172ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-07 14:55:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"SfOf+6vO3rWnw9rkV6JNeZ0xP3GxF5bsbyIhtXnONjo=", "student"=>{"rank"=>"5", "phone"=>"", "last_test"=>"2010-12-07", "last_name"=>"", "email_address"=>"", "school_id"=>"", "first_name"=>""}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-07 14:55:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"SfOf+6vO3rWnw9rkV6JNeZ0xP3GxF5bsbyIhtXnONjo=", "student"=>{"rank"=>"5", "phone"=>"", "last_test"=>"2010-12-07", "last_name"=>"", "email_address"=>"", "school_id"=>"", "first_name"=>""}}
+  [4;35;1mStudent Create (0.0ms)[0m   [0mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-07 19:56:48', '2010-12-07 19:56:48', 5, '', '2010-12-07', '', '', '', NULL)[0m
+Redirected to http://127.0.0.1:3000/students/16
+Completed in 66806ms (DB: 0) | 302 Found [http://127.0.0.1/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-07 14:56:48) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 16) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" WHERE (id = '') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/students/show.html.erb:
+11:   
+12:   <tr>
+13:   <td><b><%= label_tag("School") %>:</b></td>
+14:   <td><%= label_tag(School.find(:first, :conditions => "id = '#{@student.school_id}'").name) %><br /></td>
+15:   </tr>
+16:   
+17:   <tr>
+
+    app/views/students/show.html.erb:14
+    app/controllers/students_controller.rb:21:in `show'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+    C:\Ruby187\bin\rdebug-ide:19:in `load'
+    C:\Ruby187\bin\rdebug-ide:19
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:12:06) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+
+ActionView::TemplateError (undefined method `calendar_date_select_tag' for #<ActionView::Base:0x4938ae0>) on line #45 of app/views/students/new.html.erb:
+42: 
+43: <tr>  
+44:   <td><b><%= f.label :last_test%>:</b></td>
+45:   <td><%= calendar_date_select_tag "student[last_test", @student.last_test.to_s%></td>
+46: <!--  <td><%= f.text_field :last_test%><br /></td> -->
+47: </tr>
+48: 
+
+    app/views/students/new.html.erb:45
+    app/views/students/new.html.erb:6
+    app/controllers/students_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:16:05) [GET]
+Rendering template within layouts/students
+Rendering students/new
+
+ActionView::TemplateError (undefined method `calendar_date_select_includes' for #<ActionView::Base:0x4703bc8>) on line #2 of app/views/students/new.html.erb:
+1: <%= javascript_include_tag :defaults %>
+2: <%= calendar_date_select_includes "silver" %>
+3: 
+4: <h1>New student</h1>
+5: <% if flash[:notice]%>
+
+    app/views/students/new.html.erb:2
+    app/controllers/students_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 17:19:53) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 156ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:20:00) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:21:23) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-07 17:21:43) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/attendances]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:21:51) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:23:37) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:24:18) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:24:53) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:24:56) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:26:43) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (15.6ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:33:13) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 17:34:34) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:34:36) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:34:48) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:39:00) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:40:41) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:40:46) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:40:47) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:40:49) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:40:51) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:41:12) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:44:11) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:44:25) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:44:56) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:48:03) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 156ms (View: 78, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-07 17:48:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"December 31, 2010", "last_name"=>"me", "email_address"=>"", "school_id"=>"2", "first_name"=>"silly"}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-07 17:48:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"December 31, 2010", "last_name"=>"me", "email_address"=>"", "school_id"=>"2", "first_name"=>"silly"}}
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:52:06) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:52:45) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 17:52:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/calendar_date_select/lightblue.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:53:09) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 17:53:56) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 17:53:58) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 16) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/students/16/edit]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 17:57:00) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 18:01:47) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 18:12:25) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 18:12:53) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (15.6ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 18:13:09) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 18:23:18) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:23:20) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 11) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/11/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:23:28) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 14) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/students/14/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:23:33) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 8) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/8/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:23:38) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 13) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/13/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:24:24) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 13) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/students/13/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:24:51) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 13) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 188ms (View: 156, DB: 0) | 200 OK [http://localhost/students/13/edit]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:25:17) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/9/edit]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:25:27) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"1", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(9, '2010-12-07 23:25:27', '2010-12-07 23:25:27', NULL)[0m
+  [4;36;1mStudent Update (0.0ms)[0m   [0;1mUPDATE "students" SET "last_test" = '2011-04-15', "updated_at" = '2010-12-07 23:25:27' WHERE "id" = 9[0m
+Redirected to http://localhost:3000/students/9
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/students/9]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-07 18:25:28) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/students/9]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:28:14) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/students/9/edit]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:28:23) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"2", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/students/9]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:28:23) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"2", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(9, '2010-12-07 23:28:23', '2010-12-07 23:28:23', NULL)[0m
+  [4;36;1mStudent Update (0.0ms)[0m   [0;1mUPDATE "students" SET "updated_at" = '2010-12-07 23:28:23', "school_id" = 2 WHERE "id" = 9[0m
+Redirected to http://localhost:3000/students/9
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/students/9]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-07 18:28:23) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/9]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:29:23) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"1", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/students/9]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:29:23) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"1", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:31:13) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"2", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 18:32:52) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 156ms (View: 109, DB: 0) | 200 OK [http://127.0.0.1/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:33:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/students/9/edit]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:33:06) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"4yppMiAhYs1+gR5L1TaB2oxCeg3QlzoOqd3lhKLwqYw=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"1", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/students/9]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:33:18) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"4yppMiAhYs1+gR5L1TaB2oxCeg3QlzoOqd3lhKLwqYw=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"1", "first_name"=>"Jeff"}, "number_of_classes"=>""}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+  [4;36;1mStudent Update (0.0ms)[0m   [0;1mUPDATE "students" SET "updated_at" = '2010-12-07 23:33:32', "school_id" = 1 WHERE "id" = 9[0m
+Redirected to http://127.0.0.1:3000/students/9
+Completed in 14312ms (DB: 0) | 302 Found [http://127.0.0.1/students/9]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-07 18:33:32) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '1') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/students/9]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-07 18:34:24) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"sPV3nkfYdiOSDF8vl+8bJsXuCyyuU5KAHa4HtIA+ehU=", "id"=>"9", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"April 15, 2011", "last_name"=>"Canna", "email_address"=>"", "school_id"=>"2", "first_name"=>"Jeff"}, "number_of_classes"=>"9"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(9, '2010-12-07 23:34:36', '2010-12-07 23:34:36', 9)[0m
+  [4;36;1mStudent Update (0.0ms)[0m   [0;1mUPDATE "students" SET "updated_at" = '2010-12-07 23:34:36', "school_id" = 2 WHERE "id" = 9[0m
+Redirected to http://localhost:3000/students/9
+Completed in 11938ms (DB: 0) | 302 Found [http://localhost/students/9]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-07 18:34:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/9]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 18:39:27) [GET]
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-07 18:39:35) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (15.6ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 18:39:43) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 203ms (View: 125, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-07 18:39:46) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/attendances]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 18:50:53) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 141ms (View: 94, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-07 18:50:55) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 11) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/students/11/edit]

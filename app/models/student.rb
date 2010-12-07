@@ -6,9 +6,17 @@ class Student < ActiveRecord::Base
   has_one :school
   
   def after_initialize
-    self[:rank] = 10
-    self[:last_test] = Date.today
-    self[:classes_since_last_test] = 0  
+    if self[:rank] == nil then
+      self[:rank] = 10
+    end
+    
+    if self[:last_test] == nil then 
+      self[:last_test] = Date.today
+    end
+    
+    if self[:classes_since_last_test] == nil then
+      self[:classes_since_last_test] = 0  
+    end
   end
   
   def is_eligible_to_test(actual_test_date, credit_for_additional_classes=0)

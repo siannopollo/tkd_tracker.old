@@ -39,7 +39,7 @@
   
   <tr>
     <td><b><%= f.label :last_test%>:</b></td>
-<td><%= calendar_date_select :student, :last_test %></td>
+    <td><%= f.text_field :last_test %></td>
  </tr>
   
   <tr>
@@ -53,7 +53,7 @@
  </tr>
   
   <tr>
-  <td><b><%= label_tag("Add Classes:") %></b></td> 
+  <td><%= label_tag("Add Classes:") %></td> 
   <td><input name="number_of_classes" type="text" /></td>
   </tr>
 </table>

@@ -62,7 +62,7 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
     
-    if params[:number_of_classes] != nil then
+    if params[:number_of_classes] != nil && params[:number_of_classes].length != 0 then
       attendance = Attendance.new
       attendance.student_id = @student.id
       attendance.number_of_classes = params[:number_of_classes]

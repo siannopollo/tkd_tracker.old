@@ -1,4 +1,4 @@
-source http://rubygems.org/
+source "http://rubygems.org"
 
 gem 'abstract', '1.0.0'
 gem 'actionmailer', '2.3.8'

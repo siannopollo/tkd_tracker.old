@@ -2,25 +2,25 @@
 
 <% form_for(@student) do |f| %>
   <%= f.error_messages %>
-  <b><%= f.label :first_name%>:</b>
+  <%= f.label :first_name%>:
   <%= f.text_field :first_name%><br />
   
-  <b><%= f.label :last_name%>:</b>
+  <%= f.label :last_name%>:
   <%= f.text_field :last_name %><br />
   
-  <b><%= label_tag("School:") %></b>
+  <%= label_tag("School:") %>
   <%= collection_select(:student, :school_id, School.find(:all), :id, :name, {:selected => @student.school_id}) %><br />
   
-  <b><%= f.label :rank%>:</b>
+  <%= f.label :rank%>:
   <%= f.text_field :rank %><br />
   
-  <b><%= f.label :last_test%>:</b>
+  <%= f.label :last_test%>:
   <%= f.text_field :last_test %><br />
   
-  <b><%= f.label :email_address%>:</b>
+  <%= f.label :email_address%>:
   <%= f.text_field :email_address %><br />
   
-  <b><%= f.label :phone%>:</b>
+  <%= f.label :phone%>:
   <%= f.text_field :phone%><br />
   
   <br/><br/><b>Add Attendance</b><br />

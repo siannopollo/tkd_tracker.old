@@ -1,0 +1,39 @@
+  <b><%=  label_tag("First name") %>:</b>
+  <%=  label_tag(@student.first_name) %><br />
+  
+  <b><%=  label_tag("Last name") %>:</b>
+  <%=  label_tag(@student.last_name) %><br />
+  
+  <b><%= label_tag("School") %>:</b>
+  <%= label_tag(School.find(:first, :conditions => "id = '#{@student.school_id}'").name) %><br />
+  
+  <b><%=  label_tag("Rank") %>:</b>
+  <%=  label_tag(@student.rank) %><br />
+  
+  <b><%=  label_tag("last_test")%>:</b>
+  <%=  label_tag(@student.last_test)%><br />
+  
+  <b><%=  label_tag("Email Address")%>:</b>
+  <%=  label_tag(@student.email_address)%><br />
+  
+  <b><%=  label_tag("Phone")%>:</b>
+  <%=  label_tag(@student.phone)%><br />
+  
+<% if @student.attendances.length > 0 then%>
+<h2>Attendances</h2>
+  <table>
+  	  <tr>
+  	  	<td><b>Date</b></td>
+		<td><b>Number of Classes</b></td>
+  	  </tr>
+	  <% for attendance in @student.attendances%>
+	  	<tr style="background-color:<%=cycle('lightblue', 'white')%>">
+	  		<td><%= attendance.created_at.strftime("%Y-%b-%d") %></td>
+			<td><%= attendance.number_of_classes%></td>
+	  	</tr>
+	  <% end %>
+  </table>
+<% end %>
+  
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

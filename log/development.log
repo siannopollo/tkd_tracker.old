@@ -4816,3 +4816,16 @@ Rendering template within layouts/students
 Rendering students/new
   [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-07 10:38:51) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/students]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-07 10:39:18) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Rendering reports/test_eligibility
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/reports/test_eligibility]

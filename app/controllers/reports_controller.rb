@@ -3,7 +3,7 @@ require 'student'
 class ReportsController < ApplicationController
   def test_eligibility
     begin
-      @schools = School.find(:all)
+      @schools = School.find(:all, :order => "name")
       @students_eligible_to_test = Array.new
       actual_test_date = params[:test_date]
       

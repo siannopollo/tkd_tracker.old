@@ -1,4 +1,4 @@
-<h1>List Students Eligible to Test</h1>
+<h1>Students Eligible to Test</h1>
 
 <p style="color: red"><%= flash[:error] %></p>
 

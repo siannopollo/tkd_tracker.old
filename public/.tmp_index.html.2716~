@@ -6,10 +6,9 @@
 	</head>
 	<body>
 		<ul>
-			<li></li><a href="/attendances">Gather Attendance</a></li>
+			<li></li><a href="/attendances">Attendance</a></li>
 			<li><a href="/students/new">Register Student</a></li>
 			<li><a href="/reports/test_eligibility">Students Eligible to test</a></li>
-			<li><a href="/students">List Students</a>
 		</ul>
 	</body>
 </html>

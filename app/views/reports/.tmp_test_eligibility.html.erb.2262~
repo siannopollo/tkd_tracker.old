@@ -1,32 +1,19 @@
-<%= javascript_include_tag :defaults %>
-<%= calendar_date_select_includes "red" %>
-
 <h1>List Students Eligible to Test</h1>
 
 <p style="color: red"><%= flash[:error] %></p>
 
 <% form_tag("/reports/test_eligibility", :method=>'post') do %>
-<table>
-	<tr>
-	<td><%= label_tag("Enter Test Date:") %></td>
-	<td><%= calendar_date_select_tag "test_date" %></td>
-	</tr>
-	
-	<tr>
-	<td><%= label_tag("Choose school:") %></td>
-	<td><select name="school">
+	<%= label_tag("Enter Test Date:") %>
+  	<%= text_field_tag("test_date") %> (YYYY-DD-MM)<br />
+	<%= label_tag("Choose school:") %>
+	<select name="school">
 		<option > </option>
 		<% for school in @schools %>
 			<option value='<%= school.id %>' ><%= school.name %></option>
 		<% end %>
-	</select></td>
-	</tr>
-	
-	<tr>
-	<td><%= label_tag("Less required classes:")%></td>
-	<td><%= text_field_tag("fudge_factor") %></td>
-	</tr>
-</table>
+	</select><br />
+	<%= label_tag("Less required classes:")%>
+	<%= text_field_tag("fudge_factor") %> <br />
 	<%= submit_tag("List Eligible Students") %>
 <% end %>
 

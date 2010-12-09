@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
       @students_eligible_to_test = Array.new
       actual_test_date = params[:test_date]
       
-      if actual_test_date != nil then
+      if actual_test_date != nil && actual_test_date.length > 0 then
         actual_test_date = Date.parse(actual_test_date)
         students = students_to_check(params[:school])
     

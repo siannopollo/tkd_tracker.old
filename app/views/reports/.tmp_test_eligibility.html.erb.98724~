@@ -32,20 +32,10 @@
 
 <p><%= flash[:notice] %></p>
 
-<% if @students_eligible_to_test.length > 0 then %>
-<table>
-	<tr>
-		<td><b>Name</b></td>
-		<td><b>Testing For</b></td>
-    </tr>
-	<% for student in @students_eligible_to_test %>	
-	    <tr>
-		 <td><%= student.last_name%>, <%= student.first_name%></td>
-		 <td><%= GupNames.by_gup[student.rank - 1] %></td>
-		</tr>
-	<% end %>
+<% for student in @students_eligible_to_test %>	
+	<%= student.last_name%>, <%= student.first_name%></br>
 <% end %>
-</table>
+
 
 
 

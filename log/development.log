@@ -5558,3 +5558,64 @@ Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-07 22:13
   [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
 Rendering reports/test_eligibility
 Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-09 09:18:41) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+
+ActionView::TemplateError (undefined method `for_html_select' for GupNames:Class) on line #27 of app/views/students/new.html.erb:
+24: 
+25: <tr>  
+26:   <td><b><%= f.label :rank%>:</b></td>
+27:   <td><%= f.select("rank",  GupNames.for_html_select)%></td>
+28: </tr>
+29: 
+30: <tr>  
+
+    app/views/students/new.html.erb:27
+    app/views/students/new.html.erb:7
+    app/controllers/students_controller.rb:32:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-09 09:19:06) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-09 09:20:13) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 09:22:21) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-09 09:22:24) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 9) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/students/9/edit]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 09:26:37) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]

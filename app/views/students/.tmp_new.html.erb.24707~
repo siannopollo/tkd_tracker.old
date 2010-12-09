@@ -24,7 +24,21 @@
 
 <tr>  
   <td><b><%= f.label :rank%>:</b></td>
-  <td><%= f.select("rank",  GupNames.for_html_select)%></td>
+  <td><%= f.select("rank",  [["Mighty Kid Yellow Stripe" , 14],
+  							 ["Mighty Kid White/Yellow" , 13],
+							 ["Mighty Kid Orange Stripe" , 12],
+							 ["Mighty Kid Green Stripe" , 11],
+  							 ["10th Gup, White Belt" , 10],
+  							 ["9th Gup, Yellow Stripe" , 9],
+							 ["8th Gup, Yellow" , 8],
+							 ["7th Gup, Orange" , 7],
+							 ["6th Gup, Green" , 6],
+							 ["5th Gup, Blue" , 5],
+							 ["4th Gup, Purple" , 4],
+							 ["3rd Gup, Red" , 3],
+							 ["2nd Gup, Brown" , 2],
+							 ["1st Gup, Brown/Black" , 1]]
+							 );%></td>
 </tr>
 
 <tr>  

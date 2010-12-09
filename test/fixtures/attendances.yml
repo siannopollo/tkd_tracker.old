@@ -1,18 +1,2 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-<% for i in 1..25 %>
-attendance_<%= i %>:
-    date: 2010-12-27
-    number_of_classes: 2
-    student_id: 1
-<% end %>
-
-Sally:
-    date: 2010-12-17
-    number_of_classes: 3
-    student_id: 2
-    
-Jason:
-   date: 2011-3-15
-   number_of_classes: 10
-   student_id: 3

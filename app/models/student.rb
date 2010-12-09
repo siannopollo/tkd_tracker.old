@@ -26,7 +26,7 @@ class Student < ActiveRecord::Base
     
     test_requirement = TestingRequirements.by_gup[rank - 1]
     
-    eligible_test_date = self[:last_test] >> test_requirement["months"]
+    eligible_test_date = last_test >> test_requirement["months"]
     if actual_test_date < eligible_test_date then
       return false
     end
@@ -41,11 +41,13 @@ class Student < ActiveRecord::Base
   
   private
   def number_of_classes_since_last_test()
-    attendances = Attendance.find(:all, :conditions => "student_id = '#{self[:id]}' AND created_at > '#{self[:last_test]}'") 
-    class_count = 0
-    attendances.each { |attendance|
-      class_count += attendance.number_of_classes
-    }
+    class_count = 0;
+    attendances.each do |attendance|
+      if attendance.created_at > last_test then
+        class_count += attendance.number_of_classes
+      end
+    end
     return class_count
   end
+ 
 end

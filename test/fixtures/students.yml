@@ -1,28 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  id: 1
-  first_name: JoeJoe
-  last_name: Young
-  rank: 9
-  last_test: 2010-11-27
-  email_address: 
-  phone: 
-
-two:
-  id: 2
-  first_name: Sally
-  last_name: Smithers
-  rank: 9
-  last_test: 2010-11-27
-  email_address: 
-  phone: 
-  
-three:
-  id: 3
-  first_name: Jason
-  last_name: Jones
-  rank: 14
-  last_test: 2010-11-27
+  id: 
+  first_name:
+  last_name:
+  rank: 
+  last_test:
   email_address: 
   phone: 

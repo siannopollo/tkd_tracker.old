@@ -39,7 +39,7 @@
 		<td><b>Testing For</b></td>
     </tr>
 	<% for student in @students_eligible_to_test %>	
-	    <tr style="background-color:<%=cycle('lightblue', 'white')%>" >
+	    <tr>
 		 <td><%= student.last_name%>, <%= student.first_name%></td>
 		 <td><%= GupNames.by_gup[student.rank - 1] %></td>
 		</tr>

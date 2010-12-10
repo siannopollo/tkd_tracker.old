@@ -1,0 +1,53 @@
+<h1>Editing student</h1>
+
+<% form_for(@student) do |f| %>
+  <%= f.error_messages %>
+ <table>
+ <tr>	
+  <td><b><%= f.label :first_name%>:</b></td>
+  <td><%= f.text_field :first_name%></td>
+ </tr>
+ 
+ <tr> 
+  <td><b><%= f.label :last_name%>:</b></td>
+  <td><%= f.text_field :last_name %></td>
+ </tr>
+  
+  <tr>
+  <td><b><%= label_tag("School:") %></b></td>
+  <td><%= collection_select(:student, :school_id, School.find(:all), :id, :name, {:selected => @student.school_id}) %></td>
+ </tr>
+  
+  <tr>
+  <td><b><%= f.label :rank%>:</b></td>
+   <td><%= f.select("rank",  GupNames.for_html_select);%></td>
+ </tr>
+  
+  <tr>
+    <td><b><%= f.label :last_test%>:</b></td>
+<td><%= calendar_date_select :student, :last_test %></td>
+ </tr>
+  
+  <tr>
+  <td><b><%= f.label :email_address%>:</b></td>
+  <td><%= f.text_field :email_address %></td>
+ </tr>
+  
+  <tr>
+  <td><b><%= f.label :phone%>:</b></td>
+  <td><%= f.text_field :phone%></td>
+ </tr>
+  
+  <tr>
+  <td><b><%= label_tag("Add Classes:") %></b></td> 
+  <td><input name="number_of_classes" type="text" /></td>
+  </tr>
+</table>
+  <p>
+    <%= f.submit "Update Student Record" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Show', @student %> |
+<%= link_to 'Back', students_path %>

@@ -1,10 +1,11 @@
 class GupNames
   @@by_gup = {
+              15 => "Mighty Kid White",
               14 => "Mighty Kid Yellow Stripe",
-              13   => "Mighty Kid White/Yellow",
+              13 => "Mighty Kid White/Yellow",
               12 => "Mighty Kid Orange Stripe",
               11 => "Mighty Kid Green Stripe",
-              10   => "10th Gup, White Belt",
+              10 => "10th Gup, White Belt",
                9 => "9th Gup, Yellow Stripe",
                8 => "8th Gup, Yellow",
                7 => "7th Gup, Orange",
@@ -15,10 +16,10 @@ class GupNames
                2 => "2nd Gup, Brown",
                1 => "1st Gup, Brown/Black",
                0 => "1st Dan",
-               -1 => "2nd Dan",
-               -2 => "3rd Dan",
-               -3 => "4th Dan",
-               -4 => "5th Dan"
+              -1 => "2nd Dan",
+              -2 => "3rd Dan",
+              -3 => "4th Dan",
+              -4 => "5th Dan"
                }
   
   def self.by_gup
@@ -27,7 +28,7 @@ class GupNames
  
   def self.for_html_select
     to_return = Array.new
-    14.downto(-4) do | i |
+    15.downto(-4) do | i |
       to_return << [@@by_gup[i], i]
     end
     to_return    

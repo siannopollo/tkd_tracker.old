@@ -13,7 +13,13 @@ class TestingRequirements
   4 => {"months"=>4, "classes"=>32},
   3 => {"months"=>4, "classes"=>32},
   2 => {"months"=>5, "classes"=>40},
-  1 => {"months"=>6, "classes"=>48}
+  1 => {"months"=>6, "classes"=>48},
+  0 => {"months"=>6, "classes"=>48}, #1st Dan
+  -1 => {"months"=>12, "classes"=>104}, #2nd Dan
+  -2 => {"months"=>24, "classes"=>204}, #3rd Dan
+  -3 => {"months"=>36, "classes"=>312}, #4th Dan
+  -4 => {"months"=>48, "classes"=>416}, #5th Dan
+  -5 => {"months"=>60, "classes"=>520}
  }
  
  def self.by_gup

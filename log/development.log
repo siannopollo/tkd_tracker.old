@@ -5619,3 +5619,550 @@ Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 09:26
   [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
 Rendering reports/test_eligibility
 Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 2, 'Banks', '2010-08-01', NULL, NULL, 'Heather', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(17, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 11, 'Banks', '2010-08-01', NULL, NULL, 'Kaylee', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(18, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 39)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 4, 'Banks', '2009-10-01', NULL, NULL, 'Richard', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(19, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 44)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 6, 'Banks', '2009-08-01', NULL, NULL, 'Rick', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(20, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 20)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Battelstein', '2010-08-01', NULL, NULL, 'David', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(21, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 15, 'Battelstein', '2010-08-01', NULL, NULL, 'Gracie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(22, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 15, 'Battelstein', '2010-08-01', NULL, NULL, 'Jesse', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(23, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Battelstein', '2010-08-01', NULL, NULL, 'Josiah', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(24, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 14)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 4, 'Beam', '2010-10-01', NULL, NULL, 'Audrey', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(25, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 8)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 4, 'Beam', '2010-10-01', NULL, NULL, 'Cassie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(26, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Bostic', '2010-11-01', NULL, NULL, 'Simon ', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(27, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Bostic', '2010-11-01', NULL, NULL, 'Pat', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(28, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 15, 'Brancato', '2010-08-01', NULL, NULL, 'Abigael', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(29, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 19)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Brancato', '2010-08-01', NULL, NULL, 'Elana', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(30, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Brancato', '2010-08-01', NULL, NULL, 'Nick', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(31, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 1)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 15, 'Brancato', '2010-08-01', NULL, NULL, 'Sean', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(32, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 6, 'Eaton', '2009-06-01', NULL, NULL, 'Amy', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(33, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 71)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Ashley', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(34, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 25)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Donna', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(35, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 6, 'Eaton', '2009-06-01', NULL, NULL, 'Doug', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(36, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 38)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Eric', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(37, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Katie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(38, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 33)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 3, 'Ethridge', '2010-05-01', NULL, NULL, 'Caleb', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(39, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 7, 'Ethridge', '2009-05-01', NULL, NULL, 'Janna', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(40, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 13, 'Ethridge', '2010-11-01', NULL, NULL, 'EmmaKate', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(41, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Hand', '2010-06-01', NULL, NULL, 'Samuel', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(42, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Hand', '2010-06-01', NULL, NULL, 'Steven', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(43, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 14, 'Hutchins', '2010-11-01', NULL, NULL, 'Alexa', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(44, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Hutchins', '2010-11-01', NULL, NULL, 'Deborah', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(45, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 14, 'Hutchins', '2010-11-01', NULL, NULL, 'Nathan', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(46, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 14, 'Ianopollo', '2010-11-01', NULL, NULL, 'Kyle', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(47, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Ianopollo', '2010-11-01', NULL, NULL, 'Steve', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(48, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 6, 'Johnson', '2010-08-01', NULL, NULL, 'Alex', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(49, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 4, 'Johnson', '2010-10-01', NULL, NULL, 'Caleb', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(50, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Johnson', '2010-04-01', NULL, NULL, 'Emily', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(51, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 32)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Johnson', '2010-08-01', NULL, NULL, 'Greg', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(52, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 25)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 7, 'Johnson', '2009-08-01', NULL, NULL, 'Julia', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(53, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 32)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 5, 'Johnson', '2010-09-01', NULL, NULL, 'Mike', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(54, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 22)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Knott', '2010-08-01', NULL, NULL, 'Annie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(55, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Knott', '2010-11-01', NULL, NULL, 'Patrick', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(56, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 0)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Knott', '2010-11-01', NULL, NULL, 'Trevor', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(57, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 0)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Kadie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(58, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Lisa', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(59, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 9)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Martin', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(60, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Neal', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(61, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 9)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Rebekah', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(62, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 17)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 15, 'Kochis', '2010-08-01', NULL, NULL, 'Sorious', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(63, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 9, 'Perkins', '2010-02-01', NULL, NULL, 'Josh', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(64, '2010-12-10 01:25:09', '2010-12-10 01:25:09', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:09', '2010-12-10 01:25:09', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Kayla', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(65, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Rosita', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(66, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Sophie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(67, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 7, 'Petitjean', '2010-06-01', NULL, NULL, 'Janae', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(68, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 6, 'Petitjean', '2010-07-01', NULL, NULL, 'Zachary', NULL)[0m
+  [4;35;1mAttendance Create (15.6ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(69, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Rave', '2010-08-01', NULL, NULL, 'Billy', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(70, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Rave', '2010-08-01', NULL, NULL, 'Cameron', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(71, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 15, 'Rave', '2010-08-01', NULL, NULL, 'Kaylen', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(72, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Rave', '2010-08-01', NULL, NULL, 'Mitzi', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(73, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 9, 'Salmonson', '2010-11-01', NULL, NULL, 'Jeslyn', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(74, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 9, 'Salmonson', '2010-11-01', NULL, NULL, 'Lai', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(75, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 8, 'Sencenich', '2011-09-01', NULL, NULL, 'Andy', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(76, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Sencenich', '2009-08-01', NULL, NULL, 'Emily', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(77, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 44)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 13, 'Sencenich', '2009-08-01', NULL, NULL, 'Ian', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(78, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 7)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 12, 'Shaffer', '2010-08-01', NULL, NULL, 'Christian', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(79, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 5, 'Shaffer', '2011-09-01', NULL, NULL, 'Christine', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(80, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 17)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 5, 'Shearin', '2010-06-01', NULL, NULL, 'Richard', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(81, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 29)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Shearin', '2010-01-01', NULL, NULL, 'Will', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(82, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 31)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Brendan', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(83, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 8, 'Tierney', '2011-09-01', NULL, NULL, 'Heather', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(84, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Matthew', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(85, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Michael', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(86, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Brandie', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(87, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 15)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Brian', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(88, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Elizabeth', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(89, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'James', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(90, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 16)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Audria', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(91, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Blake', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(92, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Janet', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(93, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 9, 'Vickers', '2010-11-01', NULL, NULL, 'Justin', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(94, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Williams', '2010-08-01', NULL, NULL, 'Hill', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(95, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 21)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 15, 'Williams', '2010-08-01', NULL, NULL, 'Nate', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(96, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 15, 'Williams', '2010-08-01', NULL, NULL, 'Reese', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(97, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 12)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:25:10', '2010-12-10 01:25:10', 10, 'Williams', '2010-08-01', NULL, NULL, 'April', NULL)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(98, '2010-12-10 01:25:10', '2010-12-10 01:25:10', 20)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 2, 'Banks', '2010-08-01', NULL, NULL, 'Heather', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(3, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 11, 'Banks', '2010-08-01', NULL, NULL, 'Kaylee', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(4, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 39)[0m
+  [4;36;1mStudent Create (15.6ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 4, 'Banks', '2009-10-01', NULL, NULL, 'Richard', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(5, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 44)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 6, 'Banks', '2009-08-01', NULL, NULL, 'Rick', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(6, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 20)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 10, 'Battelstein', '2010-08-01', NULL, NULL, 'David', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(7, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 15, 'Battelstein', '2010-08-01', NULL, NULL, 'Gracie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(8, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 15, 'Battelstein', '2010-08-01', NULL, NULL, 'Jesse', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(9, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 10, 'Battelstein', '2010-08-01', NULL, NULL, 'Josiah', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(10, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 14)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 4, 'Beam', '2010-10-01', NULL, NULL, 'Audrey', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(11, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 8)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 4, 'Beam', '2010-10-01', NULL, NULL, 'Cassie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(12, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Bostic', '2010-11-01', NULL, NULL, 'Simon ', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(13, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Bostic', '2010-11-01', NULL, NULL, 'Pat', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(14, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 15, 'Brancato', '2010-08-01', NULL, NULL, 'Abigael', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(15, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 19)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 10, 'Brancato', '2010-08-01', NULL, NULL, 'Elana', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(16, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 10, 'Brancato', '2010-08-01', NULL, NULL, 'Nick', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(17, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 1)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 15, 'Brancato', '2010-08-01', NULL, NULL, 'Sean', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(18, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 6, 'Eaton', '2009-06-01', NULL, NULL, 'Amy', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(19, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 71)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Ashley', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(20, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 25)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Donna', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(21, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 6, 'Eaton', '2009-06-01', NULL, NULL, 'Doug', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(22, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 38)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Eric', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(23, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 5, 'Eaton', '2010-07-01', NULL, NULL, 'Katie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(24, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 33)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 3, 'Ethridge', '2010-05-01', NULL, NULL, 'Caleb', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(25, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 7, 'Ethridge', '2009-05-01', NULL, NULL, 'Janna', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(26, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 13, 'Ethridge', '2010-11-01', NULL, NULL, 'EmmaKate', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(27, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Hand', '2010-06-01', NULL, NULL, 'Samuel', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(28, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Hand', '2010-06-01', NULL, NULL, 'Steven', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(29, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 10)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 14, 'Hutchins', '2010-11-01', NULL, NULL, 'Alexa', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(30, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Hutchins', '2010-11-01', NULL, NULL, 'Deborah', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(31, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 14, 'Hutchins', '2010-11-01', NULL, NULL, 'Nathan', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(32, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 14, 'Ianopollo', '2010-11-01', NULL, NULL, 'Kyle', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(33, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 9, 'Ianopollo', '2010-11-01', NULL, NULL, 'Steve', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(34, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 6, 'Johnson', '2010-08-01', NULL, NULL, 'Alex', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(35, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 35)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 4, 'Johnson', '2010-10-01', NULL, NULL, 'Caleb', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(36, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:10', '2010-12-10 01:54:10', 5, 'Johnson', '2010-04-01', NULL, NULL, 'Emily', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(37, '2010-12-10 01:54:10', '2010-12-10 01:54:10', 32)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Johnson', '2010-08-01', NULL, NULL, 'Greg', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(38, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 25)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 7, 'Johnson', '2009-08-01', NULL, NULL, 'Julia', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(39, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 32)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 5, 'Johnson', '2010-09-01', NULL, NULL, 'Mike', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(40, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 22)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Knott', '2010-08-01', NULL, NULL, 'Annie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(41, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Knott', '2010-11-01', NULL, NULL, 'Patrick', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(42, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 0)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Knott', '2010-11-01', NULL, NULL, 'Trevor', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(43, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 0)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Kadie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(44, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Lisa', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(45, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 9)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Martin', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(46, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Neal', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(47, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 9)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Kochis', '2010-08-01', NULL, NULL, 'Rebekah', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(48, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 17)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 15, 'Kochis', '2010-08-01', NULL, NULL, 'Sorious', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(49, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Perkins', '2010-02-01', NULL, NULL, 'Josh', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(50, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 18)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Kayla', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(51, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Rosita', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(52, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 6, 'Perkins', '2010-11-01', NULL, NULL, 'Sophie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(53, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 7, 'Petitjean', '2010-06-01', NULL, NULL, 'Janae', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(54, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 6, 'Petitjean', '2010-07-01', NULL, NULL, 'Zachary', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(55, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Rave', '2010-08-01', NULL, NULL, 'Billy', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(56, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Rave', '2010-08-01', NULL, NULL, 'Cameron', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(57, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 15, 'Rave', '2010-08-01', NULL, NULL, 'Kaylen', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(58, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Rave', '2010-08-01', NULL, NULL, 'Mitzi', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(59, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Salmonson', '2010-11-01', NULL, NULL, 'Jeslyn', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(60, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Salmonson', '2010-11-01', NULL, NULL, 'Lai', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(61, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 8, 'Sencenich', '2011-09-01', NULL, NULL, 'Andy', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(62, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Sencenich', '2009-08-01', NULL, NULL, 'Emily', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(63, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 44)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 13, 'Sencenich', '2009-08-01', NULL, NULL, 'Ian', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(64, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 7)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 12, 'Shaffer', '2010-08-01', NULL, NULL, 'Christian', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(65, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 5, 'Shaffer', '2011-09-01', NULL, NULL, 'Christine', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(66, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 17)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 5, 'Shearin', '2010-06-01', NULL, NULL, 'Richard', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(67, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 29)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Shearin', '2010-01-01', NULL, NULL, 'Will', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(68, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 31)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Brendan', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(69, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 8, 'Tierney', '2011-09-01', NULL, NULL, 'Heather', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(70, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 3)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Matthew', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(71, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 14, 'Tierney', '2010-08-01', NULL, NULL, 'Michael', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(72, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Brandie', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(73, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 15)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Brian', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(74, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'Elizabeth', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(75, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Upshaw', '2009-04-01', NULL, NULL, 'James', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(76, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 16)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Audria', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(77, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 5)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Blake', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(78, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 4)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Vickers', '2010-08-01', NULL, NULL, 'Janet', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(79, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 6)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 9, 'Vickers', '2010-11-01', NULL, NULL, 'Justin', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(80, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 2)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:11', '2010-12-10 01:54:11', 10, 'Williams', '2010-08-01', NULL, NULL, 'Hill', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(81, '2010-12-10 01:54:11', '2010-12-10 01:54:11', 21)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:12', '2010-12-10 01:54:12', 15, 'Williams', '2010-08-01', NULL, NULL, 'Nate', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(82, '2010-12-10 01:54:12', '2010-12-10 01:54:12', 13)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:12', '2010-12-10 01:54:12', 15, 'Williams', '2010-08-01', NULL, NULL, 'Reese', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(83, '2010-12-10 01:54:12', '2010-12-10 01:54:12', 12)[0m
+  [4;36;1mStudent Create (0.0ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "rank", "last_name", "last_test", "phone", "email_address", "first_name", "school_id") VALUES('2010-12-10 01:54:12', '2010-12-10 01:54:12', 10, 'Williams', '2010-08-01', NULL, NULL, 'April', 2)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(84, '2010-12-10 01:54:12', '2010-12-10 01:54:12', 20)[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 20:58:39) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 484ms (View: 406, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 20:58:43) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 20:58:50) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = '') [0m
+Rendering reports/test_eligibility
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 20:59:51) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 21609ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:00:21) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:03:07) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 14797ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:03:29) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) [0m
+Rendering reports/test_eligibility
+Completed in 10078ms (View: 16, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:04:00) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;36;1mSchool Load (15.6ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (93.8ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 8375ms (View: 31, DB: 109) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:04:21) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 18625ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:05:09) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:09:41) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:09:49) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) [0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) [0m
+  [4;36;1mAttendance Load (15.6ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 82) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 83) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 84) [0m
+Rendering reports/test_eligibility
+Completed in 219ms (View: 16, DB: 31) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:13:24) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 203ms (View: 203, DB: 0) | 200 OK [http://127.0.0.1/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:13:40) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:13:45) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"N86QhyMmURlNp1H8KJQKXSCATCrIu7FzBETD3zL52Zg=", "test_date"=>"December 10, 2010", "fudge_factor"=>""}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 82) [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 83) [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 84) [0m
+Rendering reports/test_eligibility
+Completed in 234ms (View: 0, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]

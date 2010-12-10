@@ -5,15 +5,8 @@
 		<title>Untitled Document</title>
 	</head>
 	<body>
-		<script language="JavaScript">
-		function newWindow(url){
-			nameW = 'feature'
-			window.open(url, 'Attendance Gathering', "menubar=0,toolbar=0,status=0,location=0,directories=0");
-		}
-		</script>
-				
 		<ul>
-			<li></li><a href="javascript:newWindow('/attendances'); ">Gather Attendance</a></li>
+			<li></li><a href="/attendances">Gather Attendance</a></li>
 			<li><a href="/students/new">Register Student</a></li>
 			<li><a href="/reports/test_eligibility">Students Eligible to test</a></li>
 			<li><a href="/students">List Students</a>

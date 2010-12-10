@@ -6297,3 +6297,10 @@ Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:19:40) [DE
   Parameters: {"authenticity_token"=>"4Shus0eF8liVLWRy8nepT5tJQLE0XrdUsj2nqA6QccY=", "id"=>"3"}
 Filter chain halted as [:authenticate] rendered_or_redirected.
 Completed in 16ms (View: 16, DB: 0) | 401 Unauthorized [http://localhost/students/3]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-10 08:18:37) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 328ms (View: 250, DB: 0) | 200 OK [http://localhost/attendances]

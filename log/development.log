@@ -6166,3 +6166,134 @@ Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 21:13
   [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 84) [0m
 Rendering reports/test_eligibility
 Completed in 234ms (View: 0, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:11:57) [GET]
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 422ms (View: 391, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:12:03) [DELETE]
+  Parameters: {"authenticity_token"=>"Ol5RGIRFUUTnnqUMjk5XElSxVrFqO7fimQlOBgw1oAU=", "id"=>"84"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 84) [0m
+  [4;36;1mStudent Destroy (0.0ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 84[0m
+Redirected to http://localhost:3000/students
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/students/84]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:12:03) [GET]
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 250ms (View: 219, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-09 22:12:49) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 266ms (View: 172, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-12-09 22:12:53) [POST]
+  Parameters: {"student36"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student57"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student78"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student15"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student80"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student58"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student79"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student37"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student16"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student60"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student81"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student59"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student17"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student40"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student38"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student61"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student82"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student20"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student18"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student41"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student39"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student62"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student83"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student21"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student19"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student42"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student63"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student22"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student43"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student64"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "authenticity_token"=>"zg2A/9FKuWLYB6O6nZrg9mhEDYIQlCmc7slhihog6q0=", "student23"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student44"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student65"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student24"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student45"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student66"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student25"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student46"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student67"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student47"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student68"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student26"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student69"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student70"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student48"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student3"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student27"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student50"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student71"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student4"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student30"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student28"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student51"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student72"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student49"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student5"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student10"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student31"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student29"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student52"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student73"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student53"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student6"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student11"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student32"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student74"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student54"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student33"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student12"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student7"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student75"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student55"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student34"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student13"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student8"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student76"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "commit"=>"Register Attendances", "student56"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student35"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student14"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student9"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student77"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/attendances]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-09 22:13:06) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:13:10) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 344ms (View: 328, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2010-12-09 22:13:12) [GET]
+  Parameters: {"id"=>"33"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 33) [0m
+Rendering template within layouts/students
+Rendering students/edit
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" [0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/students/33/edit]
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2010-12-09 22:13:30) [PUT]
+  Parameters: {"commit"=>"Update Student Record", "authenticity_token"=>"zg2A/9FKuWLYB6O6nZrg9mhEDYIQlCmc7slhihog6q0=", "id"=>"33", "student"=>{"rank"=>"14", "phone"=>"234", "last_test"=>"November 01, 2010", "last_name"=>"Ianopollo", "email_address"=>"", "school_id"=>"2", "first_name"=>"Kyle"}, "number_of_classes"=>""}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/students/33]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:14:02) [DELETE]
+  Parameters: {"authenticity_token"=>"zg2A/9FKuWLYB6O6nZrg9mhEDYIQlCmc7slhihog6q0=", "id"=>"83"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 83) [0m
+  [4;36;1mStudent Destroy (0.0ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 83[0m
+Redirected to http://localhost:3000/students
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/students/83]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:14:02) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 297ms (View: 281, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:14:43) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 562ms (View: 422, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:14:52) [DELETE]
+  Parameters: {"authenticity_token"=>"zg2A/9FKuWLYB6O6nZrg9mhEDYIQlCmc7slhihog6q0=", "id"=>"82"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 82) [0m
+  [4;36;1mStudent Destroy (0.0ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 82[0m
+Redirected to http://localhost:3000/students
+Completed in 22047ms (DB: 0) | 302 Found [http://localhost/students/82]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:15:14) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 328ms (View: 203, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:17:10) [GET]
+  [4;36;1mStudent Load (62.5ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 594ms (View: 359, DB: 62) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:17:30) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 500ms (View: 438, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:17:33) [DELETE]
+  Parameters: {"authenticity_token"=>"wcAbbZYcc9YPUq2ISXq3NdbL0Z9o2WnyXqkNLTh8Tgc=", "id"=>"14"}
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-09 22:19:36) [GET]
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 453ms (View: 391, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-12-09 22:19:40) [DELETE]
+  Parameters: {"authenticity_token"=>"4Shus0eF8liVLWRy8nepT5tJQLE0XrdUsj2nqA6QccY=", "id"=>"3"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 16ms (View: 16, DB: 0) | 401 Unauthorized [http://localhost/students/3]

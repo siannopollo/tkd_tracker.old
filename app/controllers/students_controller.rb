@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
-  before_filter :authenticate, :only => [:create, :update, :delete]
-  after_filter :logged_out, :only => [:update, :delete]
+  before_filter :authenticate, :only => [:create, :update, :destroy]
+  after_filter :logged_out, :only => [:update, :destroy]
   
   # GET /students
   # GET /students.xml

@@ -2,7 +2,7 @@ require 'date'
 require 'testing_requirements'
 
 class Student < ActiveRecord::Base
-  has_many :attendances
+  has_many :attendances, :order => 'created_at DESC'
   has_one :school
   
   def after_initialize
@@ -12,10 +12,6 @@ class Student < ActiveRecord::Base
     
     if self[:last_test] == nil then 
       self[:last_test] = Date.today
-    end
-    
-    if self[:classes_since_last_test] == nil then
-      self[:classes_since_last_test] = 0  
     end
   end
   
@@ -38,8 +34,8 @@ class Student < ActiveRecord::Base
     
     return true
   end
-
-  def valid?(errors)
+   
+def valid?(errors)
     if !has_value?(first_name) || !has_value?(last_name) then
         errors << "A first and last name are required."
     end

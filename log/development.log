@@ -7291,3 +7291,156 @@ Rendering template within layouts/students
 Rendering students/new
   [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
 Completed in 108031ms (View: 31, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-11 17:31:37) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 219ms (View: 172, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-11 17:31:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"G/uPu0MnkIwbe+YzSZayhi4PMeqO2hEVI8q7VJDTwoQ=", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"December 11, 2010", "last_name"=>"", "email_address"=>"", "school_id"=>"", "first_name"=>""}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-11 17:31:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"G/uPu0MnkIwbe+YzSZayhi4PMeqO2hEVI8q7VJDTwoQ=", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"December 11, 2010", "last_name"=>"", "email_address"=>"", "school_id"=>"", "first_name"=>""}}
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-11 18:17:48) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `first_name' for #<Class:0x493c020>):
+  app/models/student.rb:7
+  app/controllers/students_controller.rb:30:in `new'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-11 18:18:44) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-12-11 18:18:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"G/uPu0MnkIwbe+YzSZayhi4PMeqO2hEVI8q7VJDTwoQ=", "student"=>{"rank"=>"10", "phone"=>"", "last_test"=>"December 11, 2010", "last_name"=>"", "email_address"=>"", "school_id"=>"", "first_name"=>""}}
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-11 18:31:33) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 234ms (View: 188, DB: 0) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#create (for 127.0.0.1 at 2010-12-11 18:31:57) [POST]
+  Parameters: {"student36"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student57"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student78"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student15"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student80"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student58"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student79"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student37"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student16"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student60"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student81"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student59"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student17"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student40"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student38"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student61"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student20"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student18"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student41"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student39"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student62"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student21"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student19"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student42"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student63"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student22"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student43"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student64"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student85"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "authenticity_token"=>"G/uPu0MnkIwbe+YzSZayhi4PMeqO2hEVI8q7VJDTwoQ=", "student23"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student44"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student65"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student24"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student45"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student66"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student25"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student46"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student67"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student47"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student68"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student26"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student69"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student70"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student48"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student3"=>{"class_one"=>"1", "class_three"=>"0", "class_two"=>"0"}, "student27"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student50"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student71"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student4"=>{"class_one"=>"1", "class_three"=>"0", "class_two"=>"1"}, "student30"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student28"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student51"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student72"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student49"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student5"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student10"=>{"class_one"=>"1", "class_three"=>"1", "class_two"=>"1"}, "student31"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student29"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student52"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student73"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student32"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student6"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student11"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student53"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student74"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student54"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student33"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student12"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student7"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student75"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student55"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student34"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student13"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student8"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student76"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "commit"=>"Register Attendances", "student56"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student35"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student14"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student9"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}, "student77"=>{"class_one"=>"0", "class_three"=>"0", "class_two"=>"0"}}
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+  [4;36;1mAttendance Create (0.0ms)[0m   [0;1mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(3, '2010-12-11 23:31:57', '2010-12-11 23:31:57', 1)[0m
+  [4;35;1mAttendance Create (0.0ms)[0m   [0mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(4, '2010-12-11 23:31:57', '2010-12-11 23:31:57', 2)[0m
+  [4;36;1mAttendance Create (0.0ms)[0m   [0;1mINSERT INTO "attendances" ("student_id", "created_at", "updated_at", "number_of_classes") VALUES(10, '2010-12-11 23:31:57', '2010-12-11 23:31:57', 3)[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 203ms (View: 109, DB: 16) | 200 OK [http://localhost/attendances]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-11 18:32:10) [GET]
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 359ms (View: 281, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-11 18:32:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 3) [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/students/3]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-11 18:32:29) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 10) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/students/10]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-11 18:39:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 3) ORDER BY created_at[0m
+Completed in 234ms (View: 156, DB: 0) | 200 OK [http://localhost/students/3]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-11 18:39:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 3) ORDER BY created_at DESC[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/3]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-11 18:40:51) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 250ms (View: 203, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-11 18:43:49) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-12-11 18:43:53) [GET]
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" ORDER BY last_name[0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 234ms (View: 188, DB: 16) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-12-11 18:43:55) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 8) [0m
+Rendering template within layouts/students
+Rendering students/show
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/students/8]

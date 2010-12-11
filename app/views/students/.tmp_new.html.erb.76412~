@@ -1,6 +1,6 @@
 <br>
 <h1>New student</h1>
-<% if flash[:error] %>
+<% if flash[:error] then %>
   <div style="color: #FF0000;" >
   	<% for error in flash[:error] %>
 		<%= error %> <br>

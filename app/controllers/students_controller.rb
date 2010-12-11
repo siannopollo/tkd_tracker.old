@@ -44,6 +44,15 @@ class StudentsController < ApplicationController
   # POST /students.xml
   def create
     @student = Student.new(params[:student])
+    
+    flash[:error] = Array.new
+    if !@student.valid?(flash[:error]) then
+      flash.now[:error]
+      respond_to do |format|
+        format.html { render "new" }
+      end
+      return
+    end
 
     respond_to do |format|
       if @student.save

@@ -38,7 +38,28 @@ class Student < ActiveRecord::Base
     
     return true
   end
-  
+
+  def valid?(errors)
+    if !has_value?(first_name) || !has_value?(last_name) then
+        errors << "A first and last name are required."
+    end
+    
+    if !has_value?(last_test) || !date_valid?(last_test) then
+      errors << "Last test must be a valid date."
+    end
+    
+    if !has_value?(school_id)
+      errors << "Please select a school."
+    end
+    
+    if !has_value?(rank)
+      errors << "Please select a rank."
+    end
+    
+    errors.empty?  
+    
+  end
+
   private
   def number_of_classes_since_last_test()
     class_count = 0;
@@ -49,5 +70,18 @@ class Student < ActiveRecord::Base
     end
     return class_count
   end
+ 
+ def has_value?(param)
+   param && !param.blank?
+ end
+ 
+ def date_valid?(date)
+   begin
+     Date.parse(date.to_s)
+   rescue ArgumentError
+     return false
+   end  
+   return true
+ end
  
 end

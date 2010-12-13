@@ -2,7 +2,7 @@ require 'student'
 
 class ReportsController < ApplicationController
   def test_eligibility
-    begin
+
       @schools = School.find(:all, :order => "name")
       @students_eligible_to_test = Array.new
       actual_test_date = params[:test_date]
@@ -26,10 +26,7 @@ class ReportsController < ApplicationController
           flash.now[:notice] = 'There are no students eligible to test on this date.'
         end
       end
-    rescue
-      flash.now[:error] = "Please enter a valid date in the format of YYYY-DD-MM"
-    end
-  
+ 
     render "test_eligibility"
     
   end

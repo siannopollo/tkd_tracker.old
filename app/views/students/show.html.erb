@@ -34,7 +34,7 @@
   <td><%=  label_tag(@student.phone)%><br /></td>
   </tr>
 </table>
-  
+	
 <% if @student.attendances.length > 0 then%>
 <h2>Attendances</h2>
   <table>
@@ -50,6 +50,7 @@
 	  <% end %>
   </table>
 <% end %>
+
   
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

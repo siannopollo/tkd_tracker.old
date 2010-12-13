@@ -7444,3 +7444,735 @@ Rendering students/show
   [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (id = '2') LIMIT 1[0m
   [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
 Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/students/8]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20101127163144)
+Migrating to CreateAttendances (20101127163403)
+Migrating to CreateSchools (20101201204349)
+Migrating to CreateTests (20101212015101)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "result" varchar(255), "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101212015101')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("attendances")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tests")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20101127163144)
+Migrating to CreateAttendances (20101127163403)
+Migrating to CreateSchools (20101201204349)
+Migrating to CreateTests (20101212015101)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "result" varchar(255), "comment" varchar(255), "student_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101212015101')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("attendances")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("students")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tests")[0m
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 09:31:34) [GET]
+  [4;36;1mSchool Load (15.6ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 172ms (View: 156, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 09:31:53) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 09:34:02) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 39810219ms (View: 31, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:37:51) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (15.6ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 77875ms (View: 16, DB: 31) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:43:08) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 149469ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:45:48) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (46.9ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 28516ms (View: 16, DB: 47) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:46:27) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:48:11) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 5672ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:48:27) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (15.6ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 201281ms (View: 16, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:52:08) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 20797ms (View: 16, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:52:52) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 68141ms (View: 0, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:54:07) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 90469ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 20:55:44) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (62.5ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 280594ms (View: 16, DB: 62) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:00:36) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering reports/test_eligibility
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:01:18) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+
+TypeError (can't dup NilClass):
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:62:in `number_of_classes_since_last_test'
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:30:in `is_eligible_to_test'
+  app/controllers/reports_controller.rb:20:in `test_eligibility'
+  app/controllers/reports_controller.rb:19:in `each'
+  app/controllers/reports_controller.rb:19:in `test_eligibility'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  C:\Ruby187\bin\rdebug-ide:19:in `load'
+  C:\Ruby187\bin\rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:07:04) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:07:10) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+
+TypeError (can't dup NilClass):
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:62:in `number_of_classes_since_last_test'
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:30:in `is_eligible_to_test'
+  app/controllers/reports_controller.rb:20:in `test_eligibility'
+  app/controllers/reports_controller.rb:19:in `each'
+  app/controllers/reports_controller.rb:19:in `test_eligibility'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  C:\Ruby187\bin\rdebug-ide:19:in `load'
+  C:\Ruby187\bin\rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:09:23) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:09:32) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (78.1ms)[0m   [0mSELECT * FROM "students" [0m
+
+TypeError (can't dup NilClass):
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:62:in `number_of_classes_since_last_test'
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:30:in `is_eligible_to_test'
+  app/controllers/reports_controller.rb:20:in `test_eligibility'
+  app/controllers/reports_controller.rb:19:in `each'
+  app/controllers/reports_controller.rb:19:in `test_eligibility'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  C:\Ruby187\bin\rdebug-ide:19:in `load'
+  C:\Ruby187\bin\rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:10:05) [GET]
+  [4;36;1mSchool Load (15.6ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:10:11) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+
+TypeError (can't dup NilClass):
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:62:in `number_of_classes_since_last_test'
+  C:\ruby scripts\rails\TkdTracker\app\models\student.rb:30:in `is_eligible_to_test'
+  app/controllers/reports_controller.rb:20:in `test_eligibility'
+  app/controllers/reports_controller.rb:19:in `each'
+  app/controllers/reports_controller.rb:19:in `test_eligibility'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  C:\Ruby187\bin\rdebug-ide:19:in `load'
+  C:\Ruby187\bin\rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:10:30) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:10:36) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+
+TypeError (String can't be coerced into Fixnum):
+  app/models/student.rb:31:in `+'
+  app/models/student.rb:31:in `is_eligible_to_test'
+  app/controllers/reports_controller.rb:20:in `test_eligibility'
+  app/controllers/reports_controller.rb:19:in `each'
+  app/controllers/reports_controller.rb:19:in `test_eligibility'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-12-12 21:12:17) [GET]
+Rendering template within layouts/students
+Rendering students/new
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:12:22) [GET]
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:12:29) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 312ms (View: 0, DB: 31) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:12:51) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"30"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 156ms (View: 0, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:13:58) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"4"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (46.9ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 219ms (View: 31, DB: 47) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:14:10) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"February 4, 2011", "fudge_factor"=>"5"}
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 11) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 12) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 13) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 14) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 27) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 30) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 31) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 32) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 33) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 34) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 36) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 42) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 43) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 60) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 61) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (15.6ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 80) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 281ms (View: 16, DB: 31) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:14:56) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:15:03) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (15.6ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 203ms (View: 16, DB: 31) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:15:59) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:16:06) [POST]
+  Parameters: {"school"=>"", "commit"=>"List Eligible Students", "authenticity_token"=>"LgHqebN0O+WpjGT1xXzZjlx4yWIY9KxtCd5kfrJtwsg=", "test_date"=>"January 7, 2011", "fudge_factor"=>"3"}
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" ORDER BY name[0m
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 4) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 7) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 8) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 9) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 15) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 16) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 17) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 18) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 19) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 20) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 21) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (46.9ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 22) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 23) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 24) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 25) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 26) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 28) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 29) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 35) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 37) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 38) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 39) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 40) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 41) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 44) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 45) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 46) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 47) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 48) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 49) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 50) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 54) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 55) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 56) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 57) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 58) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 59) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 63) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 64) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 65) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 67) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 68) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 69) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 71) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 72) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 73) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 74) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 75) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 76) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 77) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 78) ORDER BY created_at DESC[0m
+  [4;35;1mAttendance Load (0.0ms)[0m   [0mSELECT * FROM "attendances" WHERE ("attendances".student_id = 79) ORDER BY created_at DESC[0m
+  [4;36;1mAttendance Load (15.6ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 81) ORDER BY created_at DESC[0m
+Rendering reports/test_eligibility
+Completed in 203ms (View: 0, DB: 62) | 200 OK [http://localhost/reports/test_eligibility]
+
+
+Processing ReportsController#test_eligibility (for 127.0.0.1 at 2010-12-12 21:17:55) [GET]
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" ORDER BY name[0m
+Rendering reports/test_eligibility
+Completed in 156ms (View: 156, DB: 0) | 200 OK [http://localhost/reports/test_eligibility]

@@ -27,7 +27,7 @@ class Student < ActiveRecord::Base
       return false
     end
      
-    classes_taken = number_of_classes_since_last_test() + credit_for_additional_classes   
+    classes_taken = number_of_classes_since_last_test() + credit_for_additional_classes.to_i   
     if classes_taken < test_requirement["classes"] then
       return false
     end

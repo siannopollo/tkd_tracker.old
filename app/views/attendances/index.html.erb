@@ -1,24 +1,56 @@
 <h1>Attendance</h1>
  
+<% form_tag("attendances", :method=>'post') do %> 
+<%= submit_tag("Register Attendances") %><br>
+
+<div id="opendoor_students" style="float:left;margin-right:20px"> 
+<h2>OpenDoor TaeKwonDo</h2>
 <table>
   <tr>
   <th>Student</th>
   <th>Class 1</th>
   <th>Class 2</th>
   <th>Class 3</th>
+  <th>Class 4</th>
   </tr>
 
-<% form_tag("attendances", :method=>'post') do %>
-	<% for student in @students %>
+
+	<% for student in @opendoor_students %>
 	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox'}) %></td>
+		<td align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox'}) %></td>
 	  </tr>
 	<% end %>
 </table>
+</div>
 
-<%= submit_tag("Register Attendances") %>
+<div id="fairview_students" style="float:left;margin-right:20px">
+<h2>Fairview TaeKwonDo</h2>
+<table>
+  <tr>
+  <th>Student</th>
+  <th>Class 1</th>
+  <th>Class 2</th>
+  <th>Class 3</th>
+  <th>Class 4</th>
+  </tr>
+
+
+	<% for student in @fairview_students %>
+	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
+	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
+	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox'}) %></td>
+		<td align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox'}) %></td>
+	  </tr>
+	<% end %>
+</table>	
+</div>
+
+
 <% end %>
 

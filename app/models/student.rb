@@ -32,7 +32,7 @@ class Student < ActiveRecord::Base
     return true
   end
    
-def valid?(errors)
+def is_valid?(errors)
     if !has_value?(first_name) || !has_value?(last_name) then
         errors << "A first and last name are required."
     end

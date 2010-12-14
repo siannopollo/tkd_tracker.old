@@ -46,7 +46,7 @@ class StudentsController < ApplicationController
     @student = Student.new(params[:student])
     
     flash[:error] = Array.new
-    if !@student.valid?(flash[:error]) then
+    if !@student.is_valid?(flash[:error]) then
       flash.now[:error]
       respond_to do |format|
         format.html { render "new" }

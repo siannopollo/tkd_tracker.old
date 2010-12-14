@@ -9,37 +9,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101212015101) do
+ActiveRecord::Schema.define(:version => 20101201204349) do
 
   create_table "attendances", :force => true do |t|
-    t.integer   "student_id"
-    t.integer   "number_of_classes"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "student_id"
+    t.integer  "number_of_classes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "schools", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "students", :force => true do |t|
-    t.string    "first_name"
-    t.string    "last_name"
-    t.integer   "rank"
-    t.date      "last_test"
-    t.integer   "school_id"
-    t.string    "email_address"
-    t.string    "phone"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-  end
-
-  create_table "tests", :force => true do |t|
-    t.string   "result"
-    t.string   "comment"
-    t.integer  "student_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "rank"
+    t.date     "last_test"
+    t.integer  "school_id"
+    t.string   "email_address"
+    t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

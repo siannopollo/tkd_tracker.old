@@ -10482,3 +10482,27 @@ Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:30:07) [G
 Rendering template within layouts/attendances
 Rendering attendances/index
 Completed in 2094ms (View: 1844, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:59:19) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2031ms (View: 1719, DB: 47) | 200 OK [http://127.0.0.1/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 11:02:14) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1812, DB: 47) | 200 OK [http://127.0.0.1/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 11:02:46) [GET]
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2015ms (View: 1703, DB: 109) | 200 OK [http://localhost/attendances]

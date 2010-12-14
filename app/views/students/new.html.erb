@@ -14,22 +14,22 @@
   <%= f.error_messages %><br />
  <table>
  <tr>	 
-  <td><b><%= f.label :first_name%>:</b></td>
+  <td><b><%= f.label :first_name%>:</td>
   <td><%= f.text_field :first_name%></td>
  </tr>
  
  <tr> 
-  <td><b><%= f.label :last_name%>:</b></td>
+  <td><b><%= f.label :last_name%>:</td>
   <td><%= f.text_field :last_name %></td>
 </tr>
   
 <tr>  
-  <td><b><%= label_tag("School:") %></b></td>
+  <td><b><%= label_tag("School:") %></td>
   <td><%= collection_select(:student, :school_id, School.find(:all, :order => "name"), :id, :name, {:prompt => "Select School"}) %></td>
 </tr>
 
 <tr>  
-  <td><b><%= f.label :rank%>:</b></td>
+  <td><b><%= f.label :rank%>:</td>
   <td><%= f.select("rank",  GupNames.for_html_select)%></td>
 </tr>
 
@@ -39,7 +39,7 @@
 </tr>
 
 <tr>  
-  <td><b><%= f.label :email_address%>:</b></td>
+  <td><b><%= f.label :email_address%>:</td>
   <td><%= f.text_field :email_address%></td>
 </tr>
   
@@ -47,6 +47,16 @@
   <td><b><%= f.label :phone%>:</td>
   <td><%= f.text_field :phone%></td>
 </tr>
+
+ <tr>
+  <td><b><%= f.label("Secondary Phone")%>:</td>
+  <td><%= f.text_field :phone_two%></td>
+ </tr>
+ 
+ <tr>
+  <td><b><%= f.label("Parent Name")%>:</td>
+  <td><%= f.text_field :parent_name%></td>
+ </tr>
 </table> 
 
   <p>

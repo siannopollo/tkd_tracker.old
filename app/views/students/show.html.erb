@@ -1,37 +1,47 @@
   <table>
   <tr>	
-  <td><b><%=  label_tag("First name") %>:</b></td>
-  <td><%=  label_tag(@student.first_name) %><br /></td>
+  <td><b><%=  label_tag("First name") %>:</td>
+  <td><%=  label_tag(@student.first_name) %></td>
   </tr>
   
   <tr>
-  <td><b><%=  label_tag("Last name") %>:</b></td>
-  <td><%=  label_tag(@student.last_name) %><br /></td>
+  <td><b><%=  label_tag("Last name") %>:</td>
+  <td><%=  label_tag(@student.last_name) %></td>
   </tr>
   
   <tr>
-  <td><b><%= label_tag("School") %>:</b></td>
-  <td><%= label_tag(School.find(:first, :conditions => "id = '#{@student.school_id}'").name) %><br /></td>
+  <td><b><%= label_tag("School") %>:</td>
+  <td><%= label_tag(School.find(:first, :conditions => "id = '#{@student.school_id}'").name) %></td>
   </tr>
   
   <tr>
-  <td><b><%=  label_tag("Rank") %>:</b></td>
-  <td><%=  label_tag(GupNames.by_gup[@student.rank]) %><br /></td>
+  <td><b><%=  label_tag("Rank") %>:</td>
+  <td><%=  label_tag(GupNames.by_gup[@student.rank]) %></td>
   </tr>
   
   <tr>
-  <td><b><%=  label_tag("last_test")%>:</b></td>
-  <td><%=  label_tag(@student.last_test)%><br /></td>
+  <td><b><%=  label_tag("last_test")%>:</td>
+  <td><%=  label_tag(@student.last_test)%></td>
   </tr>
   
   <tr>
-  <td><b><%=  label_tag("Email Address")%>:</b></td>
-  <td><%=  label_tag(@student.email_address)%><br /></td>
+  <td><b><%=  label_tag("Email Address")%>:</td>
+  <td><%=  label_tag(@student.email_address)%></td>
   </tr>
   
   <tr>
-  <td><b><%=  label_tag("Phone")%>:</b></td>
-  <td><%=  label_tag(@student.phone)%><br /></td>
+  <td><b><%=  label_tag("Phone")%>:</td>
+  <td><%=  label_tag(@student.phone)%></td>
+  </tr>
+  
+  <tr>
+  <td><b><%=  label_tag("Secondary Phone")%>:</td>
+  <td><%=  label_tag(@student.phone_two)%></td>
+  </tr>
+  
+  <tr>
+  <td><b><%=  label_tag("Parent Name")%>:</td>
+  <td><%=  label_tag(@student.parent_name)%></td>
   </tr>
 </table>
 	

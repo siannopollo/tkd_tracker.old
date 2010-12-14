@@ -9919,3 +9919,566 @@ Processing AttendancesController#index (for 127.0.0.1 at 2010-12-13 14:31:52) [G
 Rendering template within layouts/attendances
 Rendering attendances/index
 Completed in 2531ms (View: 2000, DB: 62) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:14:22) [GET]
+  [4;36;1mStudent Load (62.5ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2108ms (View: 1780, DB: 62) | 200 OK [http://127.0.0.1/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:16:05) [GET]
+  [4;36;1mStudent Load (93.7ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1874ms (View: 1624, DB: 94) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:16:32) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1905ms (View: 1733, DB: 31) | 200 OK [http://127.0.0.1/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:17:13) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2077ms (View: 1811, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:22:10) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2001ms (View: 1720, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:28:08) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1953ms (View: 1672, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:33:28) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+ERROR: compiling _run_erb_app47views47attendances47index46html46erb RAISED compile error
+C:/ruby scripts/rails/TkdTracker/app/views/attendances/index.html.erb:45: syntax error, unexpected ')', expecting '}'
+... :onclick => "alert('hello'}") ).to_s); @output_buffer.conca...
+                              ^
+Function body:           def _run_erb_app47views47attendances47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Attendance</h1>\n \n"
+
+;  form_tag("attendances", :method=>'post') do ; @output_buffer.concat " \n"
+; @output_buffer.concat(( submit_tag("Register Attendances") ).to_s); @output_buffer.concat "<br>\n\n<div id=\"opendoor_students\" style=\"float:left;margin-right:20px\"> \n<h2>OpenDoor TaeKwonDo</h2>\n<table>\n  <tr>\n  <th>Student</th>\n  <th>Class 1</th>\n  <th>Class 2</th>\n  <th>Class 3</th>\n  <th>Class 4</th>\n  </tr>\n\n\n\t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  for student in @opendoor_students ; @output_buffer.concat "\n\t  <tr style=\"background-color:"
+; @output_buffer.concat((cycle('lightblue', 'white')).to_s); @output_buffer.concat "\">\n\t    <td align='left'>"
+; @output_buffer.concat(( student.last_name).to_s); @output_buffer.concat ", "; @output_buffer.concat((student.first_name ).to_s); @output_buffer.concat "</td>\n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_one', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_two', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_three', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t\t<td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_four', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t  </tr>\n\t"
+
+;  end ; @output_buffer.concat "\n</table>\n</div>\n\n<div id=\"fairview_students\" style=\"float:left;margin-right:20px\">\n<h2>Fairview TaeKwonDo</h2>\n<table>\n  <tr>\n  <th>Student</th>\n  <th>Class 1</th>\n  <th>Class 2</th>\n  <th>Class 3</th>\n  <th>Class 4</th>\n  </tr>\n\n\n\t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  for student in @fairview_students ; @output_buffer.concat "\n\t  <tr style=\"background-color:"
+; @output_buffer.concat((cycle('lightblue', 'white')).to_s); @output_buffer.concat "\">\n\t    <td align='left'>"
+; @output_buffer.concat(( student.last_name).to_s); @output_buffer.concat ", "; @output_buffer.concat((student.first_name ).to_s); @output_buffer.concat "</td>\n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_one', {:style => "width:30px;height:30px;", :onclick => "alert('hello'}") ).to_s); @output_buffer.concat "</td> \n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_two', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t    <td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_three', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t\t<td align='center'>"
+; @output_buffer.concat(( check_box("student#{student.id}", 'class_four', {:style => "width:30px;height:30px;"}) ).to_s); @output_buffer.concat "</td>\n\t  </tr>\n\t"
+
+;  end ; @output_buffer.concat "\n</table>\t\n</div>\n\n\n"
+
+
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/ruby scripts/rails/TkdTracker/app/views/attendances/index.html.erb:60:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/ruby scripts/rails/TkdTracker/app/controllers/attendances_controller.rb:12:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/ruby scripts/rails/TkdTracker/app/views/attendances/index.html.erb:45: syntax error, unexpected ')', expecting '}'
+... :onclick => "alert('hello'}") ).to_s); @output_buffer.conca...
+                              ^) on line #45 of app/views/attendances/index.html.erb:
+42: 	<% for student in @fairview_students %>
+43: 	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
+44: 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
+45: 	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:style => "width:30px;height:30px;", :onclick => "alert('hello'}") %></td> 
+46: 	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:style => "width:30px;height:30px;"}) %></td>
+47: 	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:style => "width:30px;height:30px;"}) %></td>
+48: 		<td align='center'><%= check_box("student#{student.id}", 'class_four', {:style => "width:30px;height:30px;"}) %></td>
+
+    app/views/attendances/index.html.erb:60:in `compile!'
+    app/controllers/attendances_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:34:25) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2031ms (View: 1828, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:46:16) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1906ms (View: 1656, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:48:40) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2125ms (View: 1797, DB: 62) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:51:20) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2125ms (View: 1797, DB: 62) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:54:10) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2046ms (View: 1781, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:56:19) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1922ms (View: 1735, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:58:48) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (78.1ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2016ms (View: 1735, DB: 109) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 08:59:24) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2109ms (View: 1766, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:00:11) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1766, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:00:34) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2109ms (View: 1781, DB: 62) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:01:06) [GET]
+  [4;36;1mStudent Load (125.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2047ms (View: 1766, DB: 141) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:01:59) [GET]
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2156ms (View: 1844, DB: 125) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:02:51) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2078ms (View: 1844, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:03:29) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2109ms (View: 1781, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:11:50) [GET]
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2157ms (View: 1844, DB: 125) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:13:57) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2110ms (View: 1875, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:16:06) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1813, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:16:55) [GET]
+  [4;36;1mStudent Load (125.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2141ms (View: 1812, DB: 125) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:17:27) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1859, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:19:56) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1844, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:38:37) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2140ms (View: 1812, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:45:59) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2031ms (View: 1734, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:48:43) [GET]
+  [4;36;1mStudent Load (125.0ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2078ms (View: 1750, DB: 125) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:49:38) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2109ms (View: 1859, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:52:11) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2265ms (View: 2031, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:53:16) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2093ms (View: 1781, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:54:01) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2062ms (View: 1734, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:55:18) [GET]
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2140ms (View: 1812, DB: 109) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:59:16) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2062ms (View: 1844, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-14 09:59:22) [GET]
+
+ActionController::RoutingError (No route matches "/bocXheck.jpg" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 09:59:46) [GET]
+  [4;36;1mStudent Load (31.2ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2093ms (View: 1781, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:03:09) [GET]
+  [4;36;1mStudent Load (109.4ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1970ms (View: 1704, DB: 109) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:06:15) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2095ms (View: 1767, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:08:10) [GET]
+  [4;36;1mStudent Load (156.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2172ms (View: 1828, DB: 172) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:09:52) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2047ms (View: 1828, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:10:21) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2157ms (View: 1891, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:12:03) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (93.8ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2110ms (View: 1797, DB: 125) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:12:30) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2110ms (View: 1797, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:27:59) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1891ms (View: 1688, DB: 31) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:29:12) [GET]
+  [4;36;1mStudent Load (31.3ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (78.1ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1953ms (View: 1688, DB: 109) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:29:40) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 1953ms (View: 1750, DB: 47) | 200 OK [http://localhost/attendances]
+
+
+Processing AttendancesController#index (for 127.0.0.1 at 2010-12-14 10:30:07) [GET]
+  [4;36;1mStudent Load (46.9ms)[0m   [0;1mSELECT * FROM "students" WHERE (school_id = 1 ) ORDER BY last_name[0m
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (school_id = 2) ORDER BY last_name[0m
+Rendering template within layouts/attendances
+Rendering attendances/index
+Completed in 2094ms (View: 1844, DB: 47) | 200 OK [http://localhost/attendances]

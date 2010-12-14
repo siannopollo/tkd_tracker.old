@@ -16,9 +16,6 @@ class Student < ActiveRecord::Base
   end
   
   def is_eligible_to_test(actual_test_date, credit_for_additional_classes=0)
-    if rank == 1
-      return false
-    end
     
     test_requirement = TestingRequirements.by_gup[rank - 1]
     

@@ -54,7 +54,7 @@
   	  </tr>
 	  <% for attendance in @student.attendances%>
 	  	<tr style="background-color:<%=cycle('lightblue', 'white')%>">
-	  		<td><%= attendance.created_at.strftime("%Y-%b-%d") %></td>
+	  		<td><%= attendance.date %></td>
 			<td><%= attendance.number_of_classes%></td>
 	  	</tr>
 	  <% end %>

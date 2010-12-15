@@ -32,7 +32,7 @@ class StudentTest < ActiveSupport::TestCase
   test "white belt ineligible to test because of testing date" do
     @white_belt.last_test = Date.civil(2010, 1, 6)
     @attendance.number_of_classes = 28
-    @attendance.created_at = Date.civil(2010, 1, 7)
+    @attendance.date = Date.civil(2010, 1, 7)
     
     assert(!@white_belt.is_eligible_to_test(Date.civil(2010, 2, 7)))
   end
@@ -40,7 +40,7 @@ class StudentTest < ActiveSupport::TestCase
   test "white belt ineligible to test due to not enough classes" do
     @white_belt.last_test = Date.civil(2010, 1, 6)
     @attendance.number_of_classes = 5
-    @attendance.created_at = Date.civil(2010, 1, 7)
+    @attendance.date = Date.civil(2010, 1, 7)
     
     assert(!@white_belt.is_eligible_to_test(Date.civil(2010, 6, 7)))
     
@@ -51,7 +51,7 @@ class StudentTest < ActiveSupport::TestCase
   test "white belt eligible to test" do
     @white_belt.last_test = Date.civil(2010, 1, 6)
     @attendance.number_of_classes = 24
-    @attendance.created_at = Date.civil(2010, 1, 7)
+    @attendance.date = Date.civil(2010, 1, 7)
     
     assert(@white_belt.is_eligible_to_test(Date.civil(2010, 4, 6)))
   end
@@ -59,7 +59,7 @@ class StudentTest < ActiveSupport::TestCase
   test "mighty kid tranition to regular class" do
     @mighty_kid_green_belt.last_test = Date.civil(2010, 1, 6)
     @attendance.number_of_classes = 12
-    @attendance.created_at = Date.civil(2010, 1, 7)
+    @attendance.date = Date.civil(2010, 1, 7)
     
     assert(@mighty_kid_green_belt.is_eligible_to_test(Date.civil(2010, 4, 6)))
     
@@ -72,7 +72,7 @@ class StudentTest < ActiveSupport::TestCase
   test "first dan" do
     @first_dan.last_test = Date.civil(2010, 1, 6)
     @attendance.number_of_classes = 1000
-    @attendance.created_at = Date.civil(2010, 1, 7)
+    @attendance.date = Date.civil(2010, 1, 7)
     
     assert(!@first_dan.is_eligible_to_test(Date.civil(2010, 11, 11)))
     
@@ -83,5 +83,5 @@ class StudentTest < ActiveSupport::TestCase
     assert(@first_dan.is_eligible_to_test(Date.civil(2010, 11, 11)))
     
   end
-   
+ 
 end

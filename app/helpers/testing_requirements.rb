@@ -6,7 +6,7 @@ class TestingRequirements
   11 => {"months"=>3, "classes"=>12}, #mighty kids Green Stripe
   10 => {"months"=>3, "classes"=>12}, #white belt (for mighty kids transitioning to 9th gup)
   9 => {"months"=>3, "classes"=>24},
-  8 => {"months"=>3, "classes"=>24},
+  8 => {"months"=>3, "classes"=>24},  
   7 => {"months"=>3, "classes"=>24},
   6 => {"months"=>3, "classes"=>24},
   5 => {"months"=>4, "classes"=>32},

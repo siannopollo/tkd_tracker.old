@@ -559,3 +559,67 @@ Migrating to CreateSchools (20101201204349)
   [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 2) [0m
   [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" WHERE (first_name = 'Jason') LIMIT 1[0m
   [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" WHERE ("attendances".student_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20101127163144)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "rank" integer, "last_test" date, "school_id" integer, "email_address" varchar(255), "phone" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101127163144')[0m
+Migrating to CreateAttendances (20101127163403)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "attendances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "number_of_classes" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101127163403')[0m
+Migrating to CreateSchools (20101201204349)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "schools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101201204349')[0m
+Migrating to AddContactInfoToStudent (20101214190850)
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "students" ADD "phone_two" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "students" ADD "parent_name" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101214190850')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("attendances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schools")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("students")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20101127163144)
+Migrating to CreateAttendances (20101127163403)
+Migrating to CreateSchools (20101201204349)
+Migrating to AddContactInfoToStudent (20101214190850)
+Migrating to AddDatecolumnToAttendance (20101215024529)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "attendances" ADD "date" date[0m
+  [4;36;1mAttendance Load (0.0ms)[0m   [0;1mSELECT * FROM "attendances" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101215024529')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("attendances")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schools")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("students")[0m

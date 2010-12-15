@@ -75,6 +75,7 @@ class StudentsController < ApplicationController
       attendance = Attendance.new
       attendance.student_id = @student.id
       attendance.number_of_classes = params[:number_of_classes]
+      attendance.date = Date.today
       attendance.save
       flash[:notice] = 'Student was successfully updated.'
     end

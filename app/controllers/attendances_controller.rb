@@ -52,16 +52,16 @@ class AttendancesController < ApplicationController
         num_classes += value.to_i();
       }
       if (num_classes > 0) 
-        attendance = Attendance.new(:student_id => student.id, 
-                                   :number_of_classes => num_classes)
-        attendance.save
+        student.attendances << Attendance.new(:number_of_classes => num_classes,
+                                              :date => Date.today)
+        student.save
       end
       
     }
  
     respond_to do |format|
         flash.now[:notice] = 'Attendance was successfully created.'
-        format.html { render :action => "index" }
+        format.html { render "done" }
     end
   end
 

@@ -52,6 +52,11 @@
   <td><b><%= label_tag("Add Classes:") %></b></td> 
   <td><input name="number_of_classes" type="text" /></td>
   </tr>
+  
+  <tr>
+  	<td><b><%= f.label :inactive %></b></td>
+  	<td><%= f.check_box(:inactive) %></td>
+  </tr>
 </table>
   <p>
     <%= f.submit "Update Student Record" %>

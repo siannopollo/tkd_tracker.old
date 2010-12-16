@@ -5,7 +5,7 @@ class AddContactInfoToStudent < ActiveRecord::Migration
   end
 
   def self.down
-    drop_column :students, :phone_two
-    drop_column :students, :parent_name
+    remove_column :students, :phone_two
+    remove_column :students, :parent_name
   end
 end

@@ -12,6 +12,6 @@ class AddDatecolumnToAttendance < ActiveRecord::Migration
   end
 
   def self.down
-    drop_column :attendances, :date
+    remove_column :attendances, :date
   end
 end

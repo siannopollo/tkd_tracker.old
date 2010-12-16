@@ -43,6 +43,11 @@
   <td><b><%=  label_tag("Parent Name")%>:</td>
   <td><%=  label_tag(@student.parent_name)%></td>
   </tr>
+  
+  <tr>
+  <td><b><%=  label_tag("Inactive")%>:</td>
+  <td><%=  label_tag(@student.inactive)%></td>
+  </tr>  
 </table>
 	
 <% if @student.attendances.length > 0 then%>

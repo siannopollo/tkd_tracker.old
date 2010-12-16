@@ -3,6 +3,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+    <script type="text/javascript">
+    <!--
+    document.onkeydown = myKeyDownHandler;
+
+    function myKeyDownHandler(key){
+	  if (key.keyCode == 84) { /* number pad '5' key */
+	  	submitButton = document.getElementById("submit_attendance");
+		if (submitButton != null) {
+			submitButton.style.visibility = "visible";		
+		}
+	  }
+    }
+    -->
+    </script>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Attendances: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>

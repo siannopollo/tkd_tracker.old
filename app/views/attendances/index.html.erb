@@ -1,7 +1,8 @@
 <h1>Attendance</h1>
- 
+
+
 <% form_tag("attendances", :method=>'post') do %> 
-<%= submit_tag("Register Attendances") %><br>
+<%= submit_tag("Register Attendances", :style => "visibility:hidden", :id => "submit_attendance") %><br>
 
 <div id="opendoor_students" style="float:left;margin-right:20px;margin-top:20px"> 
 <h2>OpenDoor TaeKwonDo</h2>

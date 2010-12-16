@@ -6,8 +6,8 @@ class AttendancesController < ApplicationController
   # GET /attendances
   # GET /attendances.xml
   def index
-    @opendoor_students = Student.find(:all, :conditions => "school_id = 1 and inactive = null", :order => "last_name")
-    @fairview_students = Student.find(:all, :conditions => "school_id = 2 and inactive = null", :order => "last_name")
+    @opendoor_students = Student.find(:all, :conditions => "school_id = 1 and inactive is null", :order => "last_name")
+    @fairview_students = Student.find(:all, :conditions => "school_id = 2 and inactive is null", :order => "last_name")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,7 +45,7 @@ class AttendancesController < ApplicationController
   # POST /attendances
   # POST /attendances.xml
   def create
-    @students = Student.find(:all, :conditions => "inactive = null", :order => "last_name")
+    @students = Student.find(:all, :conditions => "inactive is null", :order => "last_name")
     @students.each { |student|
       num_classes = 0
       params["student#{student.id}"].each {|key, value|

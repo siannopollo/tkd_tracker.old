@@ -26,18 +26,18 @@ ActiveRecord::Schema.define(:version => 20101216132401) do
   end
 
   create_table "students", :force => true do |t|
-    t.string    "first_name"
-    t.string    "last_name"
-    t.integer   "rank"
-    t.date      "last_test"
-    t.integer   "school_id"
-    t.string    "email_address"
-    t.string    "phone"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "phone_two"
-    t.string    "parent_name"
-    t.boolean   "inactive",      :default => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "rank"
+    t.date     "last_test"
+    t.integer  "school_id"
+    t.string   "email_address"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "phone_two"
+    t.string   "parent_name"
+    t.boolean  "inactive",      :default => false
   end
 
 end

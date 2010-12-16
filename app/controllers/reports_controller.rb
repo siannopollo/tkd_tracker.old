@@ -34,9 +34,9 @@ class ReportsController < ApplicationController
   private
   def students_to_check(school_id)
     if school_id != nil && school_id.length > 0 then
-      return Student.find(:all, :conditions => "school_id = '#{school_id}' and inactive is null")
+      return Student.find(:all, :conditions => "school_id = '#{school_id}' and inactive = 'f'")
     end
       
-    return Student.find(:all, :conditions => "inactive is null")
+    return Student.find(:all, :conditions => "inactive = 'f'")
   end
 end

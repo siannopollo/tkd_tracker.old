@@ -12,17 +12,17 @@
 ActiveRecord::Schema.define(:version => 20101216132401) do
 
   create_table "attendances", :force => true do |t|
-    t.integer  "student_id"
-    t.integer  "number_of_classes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.date     "date"
+    t.integer   "student_id"
+    t.integer   "number_of_classes"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.date      "date"
   end
 
   create_table "schools", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "students", :force => true do |t|

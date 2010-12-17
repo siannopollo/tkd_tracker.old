@@ -27,6 +27,8 @@ class ReportsController < ApplicationController
         end
       end
  
+    @students_eligible_to_test.sort! { |a,b| a.rank <=> b.rank}
+
     render "test_eligibility"
     
   end

@@ -4,22 +4,24 @@
 <% form_tag("attendances", :method=>'post') do %> 
 <%= submit_tag("Register Attendances", :style => "visibility:hidden", :id => "submit_attendance") %><br>
 
-<div id="opendoor_students" style="width:48%;float:left;margin-top:20px"> 
 <h2>OpenDoor TaeKwonDo</h2>
-<table>
-  <tr style="background-color:#CCCCCC;">
-  <th>Student</th>
-  <th>Class<br/>1</th>
-  <th>Class<br/>2</th>
-  <th>Class<br/>3</th>
-  <th>Class<br/>4</th>
-  <th>Classes <br/>til test</th>
-  <th>Eligible to<br/>test</th>
-  </tr>
+<div id="tableContainer" class="tableContainer">
+<table class="scrollTable">
+  <thead class="fixedHeader">
+	  <tr>
+	  <th>Student</th>
+	  <th>Class<br/>1</th>
+	  <th>Class<br/>2</th>
+	  <th>Class<br/>3</th>
+	  <th>Class<br/>4</th>
+	  <th>Classes <br/>til test</th>
+	  <th>Eligible to<br/>test</th>
+	  </tr>
+  </thead>
 
-
+<tbody class="scrollContent">
 	<% for student in @opendoor_students %>
-	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
+	  <tr>
 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
@@ -29,13 +31,19 @@
 		<td align='center'><%= student.earliest_eligible_test_date %></td>
 	  </tr>
 	<% end %>
+	<tr><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td></tr>
+	<tr><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td></tr>
+</tbody>
 </table>
 </div>
 
-<div id="fairview_students" style="width:48%;float:right;margin-top:20px">
+<br>
+
 <h2>Fairview TaeKwonDo</h2>
-<table>
-  <tr style="background-color:#CCCCCC;">
+<div id="tableContainer" class="tableContainer" >
+<table class="scrollTable" >
+<thead class="fixedHeader">
+  <tr>
   <th>Student</th>
   <th>Class<br/>1</th>
   <th>Class <br/>2</th>
@@ -44,10 +52,11 @@
   <th>Classes <br/>til test</th>
   <th>Eligible to<br/>test</th>
   </tr>
+ </thead>
 
-
+<tbody class="scrollContent">
 	<% for student in @fairview_students %>
-	  <tr style="background-color:<%=cycle('lightblue', 'white')%>">
+	  <tr>
 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
 	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
@@ -57,6 +66,9 @@
 		<td align='center'><%= student.earliest_eligible_test_date %></td>
 	  </tr>
 	<% end %>
+	<tr><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td></tr>
+	<tr><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td></tr>
+</tbody>
 </table>	
 </div>
 

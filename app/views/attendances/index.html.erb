@@ -4,7 +4,7 @@
 <% form_tag("attendances", :method=>'post') do %> 
 <%= submit_tag("Register Attendances", :style => "visibility:hidden", :id => "submit_attendance") %><br>
 
-<div id="opendoor_students" style="float:left;margin-right:20px;margin-top:20px"> 
+<div id="opendoor_students" style="width:48%;float:left;margin-top:20px"> 
 <h2>OpenDoor TaeKwonDo</h2>
 <table>
   <tr style="background-color:#CCCCCC;">
@@ -32,7 +32,7 @@
 </table>
 </div>
 
-<div id="fairview_students" style="float:right;margin-right:20px;margin-top:20px">
+<div id="fairview_students" style="width:48%;float:right;margin-top:20px">
 <h2>Fairview TaeKwonDo</h2>
 <table>
   <tr style="background-color:#CCCCCC;">
@@ -59,6 +59,7 @@
 	<% end %>
 </table>	
 </div>
+
 
 
 <% end %>

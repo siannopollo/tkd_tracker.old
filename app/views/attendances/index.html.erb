@@ -4,6 +4,13 @@
 <% form_tag("attendances", :method=>'post') do %> 
 <%= submit_tag("Register Attendances", :style => "visibility:hidden", :id => "submit_attendance") %><br>
 
+<script type="text/javascript">
+	function switchColor(elementID_tochange, checkbox) {
+		unchecked_color = document.getElementById(elementID_tochange).parentElement.style.backgroundColor;
+		document.getElementById(elementID_tochange).style.backgroundColor = checkbox.checked?'lightblue':unchecked_color;
+	}
+</script>
+
 <h2>OpenDoor TaeKwonDo</h2>
 <div id="tableContainer" class="tableContainer">
 <table class="scrollTable">
@@ -23,10 +30,10 @@
 	<% for student in @opendoor_students %>
 	  <tr>
 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox'}) %></td>
-		<td align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox'}) %></td>
+	    <td id=<%= "TD_class1_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class1_#{student.id}', this)"}) %></td>
+	    <td id=<%= "TD_class2_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class2_#{student.id}', this)"}) %></td>
+	    <td id=<%= "TD_class3_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class3_#{student.id}', this)"}) %></td>
+		<td id=<%= "TD_class4_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class4_#{student.id}', this)"}) %></td>
 		<td align='center'><%= student.classes_needed_to_test %></td>
 		<td align='center'><%= student.earliest_eligible_test_date %></td>
 	  </tr>
@@ -58,10 +65,10 @@
 	<% for student in @fairview_students %>
 	  <tr>
 	    <td align='left'><%= student.last_name%>, <%=student.first_name %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox'}) %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox'}) %></td>
-	    <td align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox'}) %></td>
-		<td align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox'}) %></td>
+	    <td id=<%= "TD_class1_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_one', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class1_#{student.id}', this)"}) %></td>
+	    <td id=<%= "TD_class2_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_two', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class2_#{student.id}', this)"}) %></td>
+	    <td id=<%= "TD_class3_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_three', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class3_#{student.id}', this)"}) %></td>
+		<td id=<%= "TD_class4_#{student.id}" %> align='center'><%= check_box("student#{student.id}", 'class_four', {:class => 'bigcheckbox', :onclick =>"switchColor('TD_class4_#{student.id}', this)"}) %></td>
 		<td align='center'><%= student.classes_needed_to_test %></td>
 		<td align='center'><%= student.earliest_eligible_test_date %></td>
 	  </tr>

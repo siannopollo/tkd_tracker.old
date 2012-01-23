@@ -1,0 +1,2 @@
+class EntryPageController < ApplicationController
+end

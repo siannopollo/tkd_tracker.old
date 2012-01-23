@@ -3,6 +3,7 @@ require 'testing_requirements'
 
 class Student < ActiveRecord::Base
   has_many :attendances, :order => 'date DESC'
+  has_many :tests, :class_name => 'TkdTest', :order => 'date DESC'
   has_one :school
   
   def after_initialize

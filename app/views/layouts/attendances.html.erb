@@ -3,6 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+	<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/mootools/1.4.1/mootools-yui-compressed.js' %>
+	<%= javascript_include_tag 'attendance_tracker' %>
     <script type="text/javascript">
     <!--
     document.onkeydown = myKeyDownHandler;
@@ -175,22 +177,20 @@ html>body tbody.scrollContent {
  
 /* make TD elements pretty. Provide alternating classes for striping the table */
 /* http://www.alistapart.com/articles/zebratables/                             */
-tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
-	background: #FFF;
+tbody.scrollContent td {
 	border-bottom: none;
 	border-left: none;
 	border-right: 1px solid #CCC;
 	border-top: 1px solid #DDD;
 	padding: 2px 3px 3px 4px
 }
- 
-tbody.scrollContent tr.alternateRow td {
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	background: #FFF;
+}
+
+tbody.scrollContent tr.alternateRow td,
+tbody.scrollContent tr.alternateRow {
 	background: #EEE;
-	border-bottom: none;
-	border-left: none;
-	border-right: 1px solid #CCC;
-	border-top: 1px solid #DDD;
-	padding: 2px 3px 3px 4px
 }
  
 /* define width of TH elements: 1st, 2nd, and 3rd respectively.          */

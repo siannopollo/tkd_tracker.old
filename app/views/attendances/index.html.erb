@@ -1,13 +1,12 @@
+<img src="TKDwebLine.jpg" /><br>
 <h1>Attendance</h1>
 
 
-<% form_tag("attendances", :method=>'post') do %> 
+<% form_tag("attendances", :method=>'post', :id => 'attendance_form') do %> 
 <%= submit_tag("Register Attendances", :style => "visibility:hidden", :id => "submit_attendance") %><br>
 
 <script type="text/javascript">
 	function switchColor(elementID_tochange, checkbox) {
-		unchecked_color = document.getElementById(elementID_tochange).parentElement.style.backgroundColor;
-		document.getElementById(elementID_tochange).style.backgroundColor = checkbox.checked?'lightblue':unchecked_color;
 	}
 </script>
 
@@ -83,3 +82,4 @@
 
 <% end %>
 
+<script type="text/javascript">new AttendanceTracker()</script>

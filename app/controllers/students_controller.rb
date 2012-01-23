@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
-  before_filter :authenticate, :only => [:create, :update, :destroy]
-  after_filter :logged_out, :only => [:update, :destroy]
+  before_filter :authenticate, :only => [:create, :edit, :update, :destroy]
+  after_filter :logged_out, :only => [:destroy]
   
   # GET /students
   # GET /students.xml
@@ -79,6 +79,13 @@ class StudentsController < ApplicationController
       attendance.save
       flash[:notice] = 'Student was successfully updated.'
     end
+    
+    test = TkdTest.new(params[:test])
+    if (test.result != nil && test.result.length != 0) then
+      test.date = Date.today
+      @student.tests << test
+      @student.last_test = test.date
+    end   
 
     respond_to do |format|
       if @student.update_attributes(params[:student])
